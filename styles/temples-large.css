@@ -1,0 +1,55 @@
+/*Styles for Large Screen*/
+@media (min-width: 768px) {
+    /*Hiding hamburger menu on large screens*/
+    .hamburger {
+        display: none;
+    }
+
+/*Showing navigation as horizontal menu*/
+    .navigation {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        gap: 0;
+    }
+
+    .navigation a {
+        border-bottom: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        margin-left: 0.5rem;
+    }
+
+/*Picture grid for large screens*/
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+/*Adjusting header*/
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 2.5rem;
+    }
+
+/*Image height adjustment*/
+    figure img {
+        height: 200px;
+    }
+}
+
+/*Adjustment for extra large screens*/
+@media (min-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    figure img {
+        height: 250px;
+    }
+}
