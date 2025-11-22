@@ -1,0 +1,276 @@
+:root {
+    --primary-color: #007749;
+    --secondary-color: #000000;
+    --accent-color: #FFB81C;
+    --red-color: #DE3831;
+    --blue-color: #002395;
+    --white-color: #FFFFFF;
+    --text-color: #333333;
+    --background-color: #f5f5f5;
+    --overlay-bg: rgba(255, 255, 255, 0.95);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'sans-serif', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    padding: 1rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color), var(--red-color), var(--blue-color), var(--secondary-color));
+    color: var(--white-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*Hero section*/
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    min-height: 400px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*Overlay base*/
+.overlay {
+    position: absolute;
+    background: var(--overlay-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid var(--accent-color);
+    max-width: 260px;
+    z-index: 10;
+}
+
+.overlay h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+}
+
+/*Data Overlay*/
+.data-overlay {
+    top: 15px;
+    left: 15px;
+    text-align: left;
+}
+
+.data-overlay ul {
+    list-style: none;
+}
+
+.data-overlay li {
+    padding: 0.2rem 0;
+    border-bottom: 1px solid rgba(0, 119, 73, 0.2);
+    font-size: 0.85rem;
+}
+
+.data-overlay li:last-child {
+    border-bottom: none;
+}
+
+.data-overlay strong {
+    color: var(--blue-color);
+    font-weight: 600;
+}
+
+/*Weather Overlay*/
+.weather-overlay {
+    top: 15px;
+    right: 15px;
+    text-align: left;
+    max-width: 220px;
+}
+
+.weather-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.weather-icon {
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.weather-data {
+    flex: 1;
+}
+
+.weather-data p {
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+.weather-data strong {
+    color: var(--red-color);
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/*View for mobile*/
+@media (max-width: 799px) {
+    .hero {
+        margin-bottom: 0;
+        min-height: 350px;
+    }
+    
+    .overlay {
+        max-width: 220px;
+        padding: 0.8rem;
+    }
+    
+    .data-overlay {
+        top: 12px;
+        left: 12px;
+        max-width: 200px;
+    }
+    
+    .weather-overlay {
+        top: 12px;
+        right: 12px;
+        max-width: 180px;
+    }
+    
+    .overlay h2 {
+        font-size: 1.1rem;
+    }
+    
+    .data-overlay li,
+    .weather-data p {
+        font-size: 0.8rem;
+    }
+    
+    .weather-icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .weather-content {
+        gap: 0.5rem;
+    }
+}
+
+/*Wider View*/
+@media (min-width: 800px) {
+    body {
+        padding: 2rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+    
+    .overlay {
+        max-width: 240px;
+    }
+    
+    .data-overlay {
+        top: 20px;
+        left: 20px;
+        max-width: 220px;
+    }
+    
+    .weather-overlay {
+        top: 20px;
+        right: 20px;
+        max-width: 200px;
+    }
+    
+    .weather-overlay h2::after {
+        content: " 🟶";
+        margin-left: 0.3rem;
+        color: var(--accent-color);
+        font-size: 1rem;
+    }
+}
+
+/*View for small screens*/
+@media (max-width: 480px) {
+    .overlay {
+        max-width: 180px;
+        padding: 0.6rem;
+    }
+    
+    .data-overlay,
+    .weather-overlay {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin: 0.5rem auto;
+        max-width: 90%;
+    }
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .data-overlay li,
+    .weather-data p {
+        font-size: 0.75rem;
+    }
+    
+    .overlay h2 {
+        font-size: 1rem;
+    }
+}
+
+/*Ensuring overlays are visible and positioned properly*/
+@media (min-width: 481px) {
+    .data-overlay,
+    .weather-overlay {
+        position: absolute;
+    }
+}

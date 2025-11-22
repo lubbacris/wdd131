@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Africa - Country Page</title>
+    <meta name="description" content="Information about South Africa including data, weather and facts">
+    <meta name="author" content="Lewis Karume">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>South Africa</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/south-africa-large.webp" media="(min-width: 800px)">
+                <img src="images/south-africa-large.webp" alt="Landscape of South Africa
+                , Cape Town with Table Mountain in the view" width="400" height="300" loading="lazy">
+            </picture>
+            
+            <div class="overlay data-overlay">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 1,221,037 sq km</li>
+                    <li><strong>Population:</strong> 60,414,495</li>
+                    <li><strong>Capital:</strong> Pretoria</li>
+                    <li><strong>Languages:</strong> Zulu, Xhosa, Afrikaans, English</li>
+                    <li><strong>Currency:</strong> South African Rand</li>
+                    <li><strong>Time Zone:</strong> UTC+2</li>
+                    <li><strong>Calling Code:</strong> +27</li>
+                    <li><strong>Internet TLD:</strong> .za</li>
+                </ul>
+            </div>
+
+            <div class="overlay weather-overlay">
+                <h2>Weather 🌦️ </h2>
+                <div class="weather-content">
+                    <div class="weather-data">
+                        <p><strong>Temp:</strong> <span id="temperature">10</span> °C</p>
+                        <p><strong>Conditions:</strong> Sunny</p>
+                        <p><strong>Wind:</strong> <span id="wind-speed">5</span> km/h</p>
+                        <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌤️ Lewis Karume 🌤️ South Africa</p>
+        <p>Last Modification: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+</html>
