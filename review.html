@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+        <nav>
+            <a href="form.html">Back to Form</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container confirmation-container">
+            <div class="confirmation-card">
+                <div class="success-icon">✓</div>
+                <h2>Review Submitted Successfully!</h2>
+                <p class="thank-you">Thank you for sharing your feedback. Your review helps us improve our products and services.</p>
+                
+                <div class="review-summary">
+                    <h3>Review Summary</h3>
+                    <div id="reviewData"></div>
+                </div>
+
+                <div class="counter-card">
+                    <h3>Total Reviews Submitted</h3>
+                    <div class="counter-display">
+                        <span id="reviewCounter">0</span>
+                    </div>
+                    <p>Your contribution is valuable to our growth!</p>
+                </div>
+
+                <a href="form.html" class="submit-another-btn">Submit Another Review?</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> 👨🏽‍💻 Lewis Karume 👨🏽‍💻 South Africa</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/review.js" defer></script>
+</body>
+</html>
