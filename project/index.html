@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solar System Rollout - Clean energy solutions for urban centres in South Africa. End load-shedding and save money with solar power.">
+    <title>Solar System Rollout | Home</title>
+    
+    <!-- CSS File References -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Solar System Rollout Logo" width="40" height="40" loading="eager">
+                <span class="logo-text">Solar System Rollout</span>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="solution.html" class="nav-link">Solution</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                    <li><a href="review.html" class="nav-link">Reviews</a></li>
+                    <li><a href="getstarted.html" class="nav-link">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Power Your Home. Power Your Future.</h1>
+                    <p class="hero-subtitle">End load-shedding and save money with a tailored solar solution for urban residences in South Africa.</p>
+                    <div class="hero-buttons">
+                        <a href="getstarted.html" class="btn btn-primary">Get Free Assessment</a>
+                        <a href="solution.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-home.jpg" 
+                         alt="Modern house with solar panels in South Africa" 
+                         width="600" 
+                         height="400"
+                         loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="1250">0</div>
+                        <div class="stat-label">Homes Powered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="80">0%</div>
+                        <div class="stat-label">Average Savings</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="2500">0</div>
+                        <div class="stat-label">Tonnes CO₂ Reduced</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="24">0/7</div>
+                        <div class="stat-label">Support Hours</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Solar System Rollout</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>End Load-Shedding</h3>
+                        <p>Keep your lights on and essential appliances running during power cuts with our battery backup systems.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Reduce Bills by 80%</h3>
+                        <p>Generate your own electricity and dramatically cut your monthly utility costs with our efficient solar systems.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>Eco-Friendly</h3>
+                        <p>Reduce your carbon footprint by up to 3 tonnes of CO₂ annually with clean, renewable solar energy.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>10-Year Warranty</h3>
+                        <p>All our installations come with a comprehensive 10-year warranty on panels and performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Calculator -->
+        <section class="calculator-preview">
+            <div class="container">
+                <h2 class="section-title">Estimate Your Savings</h2>
+                <div class="calculator-preview-container">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label for="quick-bill">Monthly Electricity Bill (ZAR)</label>
+                            <input type="range" id="quick-bill" min="500" max="5000" value="2000" step="100">
+                            <span id="quick-bill-display" class="value-display">R2,000</span>
+                        </div>
+                        <button id="quick-calculate" class="btn btn-primary">Calculate Savings</button>
+                    </div>
+                    <div class="calculator-results">
+                        <h3>Estimated Results</h3>
+                        <div class="result-row">
+                            <span>Monthly Savings:</span>
+                            <span id="quick-monthly-savings" class="result-value">R1,600</span>
+                        </div>
+                        <div class="result-row">
+                            <span>Annual Savings:</span>
+                            <span id="quick-annual-savings" class="result-value">R19,200</span>
+                        </div>
+                        <div class="result-row">
+                            <span>Payback Period:</span>
+                            <span id="quick-payback" class="result-value">6.5 years</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="calculator-note">For detailed calculations, visit our <a href="calculator.html">Savings Calculator</a></p>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"Since installing solar, we haven't experienced a single hour of load-shedding. Our electricity bill has dropped by 75%!"</p>
+                            <div class="testimonial-author">
+                                <strong>Thabo M.</strong>
+                                <span>Johannesburg</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The installation was professional and completed in two days. Best investment we've made for our home."</p>
+                            <div class="testimonial-author">
+                                <strong>Sarah K.</strong>
+                                <span>Cape Town</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The financing options made it affordable. Now we're energy independent and saving money every month."</p>
+                            <div class="testimonial-author">
+                                <strong>David L.</strong>
+                                <span>Durban</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-prev" aria-label="Previous testimonial">‹</button>
+                    <div class="testimonial-dots">
+                        <button class="dot active" data-index="0" aria-label="Go to testimonial 1"></button>
+                        <button class="dot" data-index="1" aria-label="Go to testimonial 2"></button>
+                        <button class="dot" data-index="2" aria-label="Go to testimonial 3"></button>
+                    </div>
+                    <button class="testimonial-next" aria-label="Next testimonial">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Take Control of Your Energy?</h2>
+                <p>Join thousands of South African homeowners who have ended load-shedding and reduced their electricity bills.</p>
+                <div class="cta-buttons">
+                    <a href="getstarted.html" class="btn btn-primary btn-large">Start Your Journey</a>
+                    <a href="tel:0871234567" class="btn btn-secondary btn-large">Call Us Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Solar System Rollout Logo" width="40" height="40" loading="lazy">
+                        <h3>Solar System Rollout</h3>
+                    </div>
+                    <p>Clean energy solutions for South African urban residential centres.</p>
+                    <div class="footer-contact">
+                        <p><strong>📞 Phone:</strong> 087 123 4567</p>
+                        <p><strong>✉️ Email:</strong> info@solarsystemrollout.co.za</p>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="solution.html">Solution</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="review.html">Reviews</a></li>
+                        <li><a href="getstarted.html">Get Started</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Office Hours</h4>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday:</span> 8:00 AM - 5:00 PM</li>
+                        <li><span>Saturday:</span> 9:00 AM - 1:00 PM</li>
+                        <li><span>Sunday:</span> Closed</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for solar energy tips and updates.</p>
+                    <form class="newsletter-form" id="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Solar System Rollout. All rights reserved.</p>
+                <p>Address: 123 Solar Valley, Sandton, Johannesburg, 2196</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

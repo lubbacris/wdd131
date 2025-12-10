@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get started with Solar System Rollout. Request a free solar assessment for your home in South Africa.">
+    <title>Solar System Rollout | Get Started</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Solar System Rollout Logo" width="40" height="40" loading="eager">
+                <span class="logo-text">Solar System Rollout</span>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="solution.html" class="nav-link">Solution</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                    <li><a href="review.html" class="nav-link">Reviews</a></li>
+                    <li><a href="getstarted.html" class="nav-link active">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Get Started With Solar</h1>
+                    <p class="hero-subtitle">Request a free, no-obligation assessment for your home.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-getstarted.jpg" 
+                         alt="Homeowner reviewing solar panel options" 
+                         width="600" 
+                         height="400"
+                         loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="getstarted-section">
+            <div class="container">
+                <div class="form-container">
+                    <h2 class="section-title">Free Solar Assessment Request</h2>
+                    <p class="form-intro">Complete this form and our energy consultant will contact you within 24 hours.</p>
+                    
+                    <form id="solar-assessment-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" name="full-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Property Address *</label>
+                            <input type="text" id="address" name="address" required placeholder="Street, Suburb, City">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="monthly-bill">Current Monthly Electricity Bill (ZAR) *</label>
+                            <select id="monthly-bill" name="monthly-bill" required>
+                                <option value="">Select range</option>
+                                <option value="0-1000">R0 - R1,000</option>
+                                <option value="1001-2000">R1,001 - R2,000</option>
+                                <option value="2001-3000" selected>R2,001 - R3,000</option>
+                                <option value="3001-4000">R3,001 - R4,000</option>
+                                <option value="4000+">R4,000+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="roof-type">Roof Type *</label>
+                            <select id="roof-type" name="roof-type" required>
+                                <option value="">Select roof type</option>
+                                <option value="tiled">Tiled</option>
+                                <option value="metal" selected>Metal/Corrugated Iron</option>
+                                <option value="flat">Flat Concrete</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Main Priority *</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="priority" value="loadshedding" required>
+                                    <span>Ending load-shedding</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="priority" value="savings" checked>
+                                    <span>Reducing electricity bills</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="priority" value="environment">
+                                    <span>Environmental sustainability</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additional-info">Additional Information</label>
+                            <textarea id="additional-info" name="additional-info" rows="4" placeholder="Any specific questions about solar installation?"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <span>Subscribe to newsletter for solar tips and updates</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span>I agree to the terms and conditions and privacy policy *</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit Assessment Request</button>
+                            <button type="button" id="clear-form" class="btn btn-secondary">Clear Form</button>
+                        </div>
+                    </form>
+                    
+                    <div id="success-message" class="success-message" style="display: none;">
+                        <h3>✅ Thank You!</h3>
+                        <p>Your assessment request has been submitted successfully. Our consultant will contact you within 24 hours.</p>
+                        <p>Confirmation sent to <span id="user-email"></span>.</p>
+                        <button id="new-request" class="btn btn-secondary">Submit Another Request</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Solar System Rollout Logo" width="40" height="40" loading="lazy">
+                        <h3>Solar System Rollout</h3>
+                    </div>
+                    <p>Clean energy solutions for South African urban residential centres.</p>
+                    <div class="footer-contact">
+                        <p><strong>📞 Phone:</strong> 087 123 4567</p>
+                        <p><strong>✉️ Email:</strong> info@solarsystemrollout.co.za</p>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="solution.html">Solution</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="review.html">Reviews</a></li>
+                        <li><a href="getstarted.html">Get Started</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Office Hours</h4>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday:</span> 8:00 AM - 5:00 PM</li>
+                        <li><span>Saturday:</span> 9:00 AM - 1:00 PM</li>
+                        <li><span>Sunday:</span> Closed</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for solar energy tips and updates.</p>
+                    <form class="newsletter-form" id="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Solar System Rollout. All rights reserved.</p>
+                <p>Address: 123 Solar Valley, Sandton, Johannesburg, 2196</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/form-validation.js" defer></script>
+</body>
+</html>

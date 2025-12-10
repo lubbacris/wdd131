@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit your review of Solar System Rollout services and installations.">
+    <title>Solar System Rollout | Reviews</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Solar System Rollout Logo" width="40" height="40" loading="eager">
+                <span class="logo-text">Solar System Rollout</span>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="solution.html" class="nav-link">Solution</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                    <li><a href="review.html" class="nav-link active">Reviews</a></li>
+                    <li><a href="getstarted.html" class="nav-link">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Customer Reviews</h1>
+                    <p class="hero-subtitle">Share your experience and read what our customers say about our solar solutions.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-review.jpg" 
+                         alt="Happy customer with solar installation" 
+                         width="600" 
+                         height="400"
+                         loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Form -->
+        <section class="review-section">
+            <div class="container">
+                <h2 class="section-title">Submit Your Review</h2>
+                
+                <form id="product-review-form" class="review-form">
+                    <!-- Overall Rating -->
+                    <div class="form-group">
+                        <label for="overall-rating">Overall Rating *</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5" title="5 stars">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="4 stars">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3 stars">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2 stars">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1 star">★</label>
+                        </div>
+                    </div>
+
+                    <!-- Review Title -->
+                    <div class="form-group">
+                        <label for="review-title">Review Title *</label>
+                        <input type="text" id="review-title" name="review-title" required placeholder="Brief summary of your experience">
+                    </div>
+
+                    <!-- Installation Date -->
+                    <div class="form-group">
+                        <label for="installation-date">Installation Date *</label>
+                        <input type="date" id="installation-date" name="installation-date" required>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="form-group">
+                        <label for="location">Location (City) *</label>
+                        <select id="location" name="location" required>
+                            <option value="">Select your city</option>
+                            <option value="johannesburg">Johannesburg</option>
+                            <option value="cape-town">Cape Town</option>
+                            <option value="durban">Durban</option>
+                            <option value="pretoria">Pretoria</option>
+                        </select>
+                    </div>
+
+                    <!-- Review Text -->
+                    <div class="form-group">
+                        <label for="review-text">Your Review *</label>
+                        <textarea id="review-text" name="review-text" rows="6" required placeholder="Share details about your experience..."></textarea>
+                    </div>
+
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="reviewer-name">Your Name *</label>
+                        <input type="text" id="reviewer-name" name="reviewer-name" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="reviewer-email">Email Address *</label>
+                        <input type="email" id="reviewer-email" name="reviewer-email" required>
+                    </div>
+
+                    <!-- Consent -->
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <span>I consent to having my review published on the website *</span>
+                        </label>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                        <button type="button" id="reset-review" class="btn btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div id="review-success" class="success-message" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank You for Your Review!</h3>
+                    <p>Your feedback has been submitted successfully.</p>
+                    <button id="submit-another" class="btn btn-secondary">Submit Another Review</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Existing Reviews -->
+        <section class="existing-reviews">
+            <div class="container">
+                <h2 class="section-title">Customer Reviews</h2>
+                <div class="reviews-container" id="reviews-list">
+                    <!-- Reviews loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Solar System Rollout Logo" width="40" height="40" loading="lazy">
+                        <h3>Solar System Rollout</h3>
+                    </div>
+                    <p>Clean energy solutions for South African urban residential centres.</p>
+                    <div class="footer-contact">
+                        <p><strong>📞 Phone:</strong> 087 123 4567</p>
+                        <p><strong>✉️ Email:</strong> info@solarsystemrollout.co.za</p>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="solution.html">Solution</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="review.html">Reviews</a></li>
+                        <li><a href="getstarted.html">Get Started</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Office Hours</h4>
+                    <ul class="hours-list">
+                        <li><span>Monday - Friday:</span> 8:00 AM - 5:00 PM</li>
+                        <li><span>Saturday:</span> 9:00 AM - 1:00 PM</li>
+                        <li><span>Sunday:</span> Closed</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for solar energy tips and updates.</p>
+                    <form class="newsletter-form" id="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required aria-label="Email for newsletter">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Solar System Rollout. All rights reserved.</p>
+                <p>Address: 123 Solar Valley, Sandton, Johannesburg, 2196</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/form-validation.js" defer></script>
+</body>
+</html>

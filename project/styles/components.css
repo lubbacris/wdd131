@@ -1,0 +1,496 @@
+/* Cards */
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.stat-label {
+    color: var(--text);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Features Grid */
+.features-grid,
+.benefits-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.feature-card,
+.benefit-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.feature-icon,
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary);
+    margin: 0.5rem auto;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+/* Calculator */
+.calculator-container,
+.calculator-preview-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin: 2rem 0;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group input[type="range"] {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.value-display {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 0.5rem;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--gray);
+}
+
+.result-value {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.calculator-note {
+    text-align: center;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+/* Testimonials */
+.testimonials-container {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary);
+    margin: 1rem 0;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    text-align: right;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1rem;
+}
+
+.gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--gray);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.project-card {
+    overflow: hidden;
+}
+
+.project-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.completed-badge {
+    background-color: var(--accent);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    color: var(--text);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.project-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray);
+}
+
+.project-stats .stat {
+    text-align: center;
+}
+
+.project-stats .stat strong {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.project-stats .stat span {
+    font-size: 0.75rem;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+/* Process Steps */
+.process-steps {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.process-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content ul {
+    list-style-position: inside;
+    margin: 0.5rem 0;
+}
+
+.step-content li {
+    margin-bottom: 0.25rem;
+}
+
+/* FAQ */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--light);
+    border: none;
+    text-align: left;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.faq-answer {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer.open {
+    padding: 1rem;
+    max-height: 500px;
+}
+
+/* Forms */
+.review-form,
+.form-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin: 2rem 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--gray);
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-intro {
+    color: var(--text);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-group label,
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+}
+
+.star-rating {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--gray);
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: var(--secondary);
+}
+
+.form-actions,
+.calculator-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Success Message */
+.success-message {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Reviews */
+.reviews-container {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    margin: 2rem 0;
+}
+
+.cta-section h2 {
+    color: white;
+}
+
+.cta-section p {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
